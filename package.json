@@ -1,0 +1,21 @@
+{
+  "name": "kahete_node",
+  "version": "1.0.0",
+  "description": "Kahete node project",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "watch": "nodemon src/index.js",
+    "test": "npm run test"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "hbs": "^4.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  }
+}

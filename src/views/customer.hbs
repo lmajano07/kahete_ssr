@@ -1,0 +1,41 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/site/styles/style.css" />
+    <title>Kahete Customer</title>
+  </head>
+  <body>
+    <div id="row">
+      <div class="icon">K</div>
+      <div class="icon">...</div>
+    </div>
+    <div id="column" style="margin-top: 25px;">
+      <img src={{customer.photo.image_url}} alt="profile" class="profile-pic" />
+      <p class="title-style">{{customer.name}} {{customer.lastname}}</p>
+      <p class="subtitle-style" style="margin-top: -10;">{{customer.email}}</p>
+      <p
+        class="subtitle-style"
+        style="margin-top: -10;"
+      >{{customer.phone_number}}</p>
+      <button class="button">Save contact</button>
+    </div>
+    <div id="column" style="flex: 1; margin-top: 50px;">
+      {{#each customer.user_links}}
+        <button
+          id="row"
+          class="social-button"
+          style="margin-bottom: 16px;"
+          onclick="window.open('https://{{this.url}}', '_blank');"
+        >
+          <div>
+            ICON
+            {{this.social_media.type}}
+          </div>
+          ARROW
+        </button>
+      {{/each}}
+    </div>
+
+  </body>
+</html>
