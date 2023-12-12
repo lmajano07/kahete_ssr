@@ -4,7 +4,7 @@ import { fileURLToPath } from "url";
 
 import customerRouter from "./routes/customer.router.js";
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 const app = express();
