@@ -10,9 +10,9 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const app = express();
 
 app.set("view engine", "hbs");
-app.set("views", path.join(process.cwd(), "views"));
+app.set("views", path.join(path.resolve(), "views"));
 
-app.use("/site", express.static(path.join(process.cwd(), "public")));
+app.use("/site", express.static(path.join(path.resolve(), "public")));
 
 app.use(express.json());
 
